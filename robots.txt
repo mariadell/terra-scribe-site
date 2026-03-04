@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://terrascribe.app/sitemap.xml
+
+# Exclude Flutter build artifacts from crawling (not served, but just in case)
+Disallow: /build/
+Disallow: /.dart_tool/
+Disallow: /.pub-cache/

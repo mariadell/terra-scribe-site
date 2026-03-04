@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── Primary SEO ── -->
+  <title>TerraScribe — Free Farm &amp; Beekeeping Logbook App for Android</title>
+  <meta name="description" content="TerraScribe is the free offline logbook for farmers and beekeepers. Track hive health, log treatments, manage fields, and export to CSV or PDF. Available now on Android.">
+  <meta name="keywords" content="farm record keeping app, beekeeping logbook, livestock records, agricultural compliance, offline farm app, Spain CUE, voice logging, field diary">
+  <link rel="canonical" href="https://terrascribe.app/">
+
+  <!-- ── hreflang ── -->
+  <link rel="alternate" hreflang="en" href="https://terrascribe.app/">
+  <link rel="alternate" hreflang="es" href="https://terrascribe.app/es/">
+  <link rel="alternate" hreflang="x-default" href="https://terrascribe.app/">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://terrascribe.app/">
+  <meta property="og:title"       content="TerraScribe — Log your farm. Export everything.">
+  <meta property="og:description" content="TerraScribe is the free offline logbook for farmers and beekeepers. Track hive health, log treatments, manage fields, and export to CSV or PDF. Available now on Android.">
+  <meta property="og:image"       content="https://terrascribe.app/assets/images/og-image.png">
+  <meta property="og:locale"      content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="TerraScribe — Log your farm. Export everything.">
+  <meta name="twitter:description" content="TerraScribe is the free offline logbook for farmers and beekeepers. Track hive health, log treatments, manage fields, and export to CSV or PDF. Available now on Android.">
+  <meta name="twitter:image"       content="https://terrascribe.app/assets/images/og-image.png">
+
+  <!-- ── Theme ── -->
+  <meta name="theme-color" content="#2D6A4F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- ── Favicon placeholder ── -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- ── Google Analytics / Ads (uncomment and replace GA_MEASUREMENT_ID) ──
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
+
+  <!-- ── Meta Pixel (uncomment and replace YOUR_PIXEL_ID) ──
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){...};
+    fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView');
+  </script>
+  -->
+
+  <!-- ── Structured data: SoftwareApplication ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TerraScribe",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Agricultural Management",
+    "operatingSystem": "Android",
+    "description": "Free offline field logbook for farmers and beekeepers. Track hive health, log treatments, manage fields, and export to CSV or PDF.",
+    "url": "https://terrascribe.app/",
+    "screenshot": "https://terrascribe.app/assets/images/og-image.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "TerraScribe"
+    },
+    "softwareVersion": "1.0",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    },
+    "inLanguage": ["en", "es"]
+  }
+  </script>
+
+  <!-- ── Structured data: FAQ ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is TerraScribe free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, TerraScribe is completely free during the beta period. Download it, use every feature, export all your records — no cost, no subscription."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Completely. All your data is stored on your device. Logging, reporting, reminders, and CSV/PDF exports all work with zero signal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can I log a record?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under 15 seconds. Tap the mic, say what you did, review and save. No typing required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export my records?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Generate a report for any date range and export it as a clean CSV or PDF. Share by email, WhatsApp, or print — directly from the app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your data never leaves your device unless you explicitly export it. No account is required, there's no cloud sync, and nothing is sent to our servers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What farms does TerraScribe support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beekeeping, crop and field farming, livestock, and machinery management — all in one app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is iOS available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're working on it! TerraScribe is currently available on Android. iOS is coming soon — contact us to be notified when it launches."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to create an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Download and start logging immediately. No sign-up, no login."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="./" class="nav-logo" aria-label="TerraScribe home">
+        <img class="nav-logo-icon" src="assets/images/terrascribe-logo.png" alt="" width="44" height="44">
+        TerraScribe
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#export">Export</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-lang" aria-label="Language selector">
+          <a href="./" class="active" hreflang="en" aria-current="page">EN</a>
+          <a href="es/" hreflang="es">ES</a>
+        </div>
+        <a href="#download" class="btn btn-sun btn-sm nav-cta-desktop">Get the App Free</a>
+      </div>
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <a href="#how-it-works">How it works</a>
+  <a href="#features">Features</a>
+  <a href="#export">Export</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="#download" class="btn btn-sun mt-md">Get the App Free</a>
+  <div class="drawer-lang">
+    <a href="./" hreflang="en">EN</a>
+    <a href="es/" hreflang="es">ES</a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<header class="hero" id="top">
+  <div class="hero-noise" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Now on Android · iOS coming soon
+      </div>
+
+      <h1 class="display">
+        Your farm.<br>
+        <em>Always organised.</em>
+      </h1>
+
+      <p class="hero-sub">
+        TerraScribe is the free field logbook built for farmers and beekeepers.
+        Track your hives, log treatments, manage your fields — and export
+        everything to CSV or PDF in seconds. No paperwork. No Wi-Fi needed.
+      </p>
+
+      <div class="hero-mic" aria-hidden="true">
+        <div class="hero-mic-inner">
+          <img src="assets/images/terrascribe-mic.png" alt="" class="hero-mic-icon">
+          <div class="hero-mic-rings" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="hero-transcription" aria-live="polite" role="status">
+        <span class="hero-transcription-label">Listening...</span>
+        <div class="hero-transcription-line" id="heroTranscription" data-phrases='["Hive 3, oxalic acid, 2ml","Field A, fertilized, March 2","Queen check, colony strong","Varroa treatment, Apivar strips, 6 weeks"]'></div>
+      </div>
+
+      <div class="hero-actions">
+        <div class="hero-download-row">
+          <a href="#download" class="store-btn store-btn-ios disabled-soon" aria-label="Download TerraScribe on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span class="store-btn-inner">
+              <span class="store-btn-pre">Download on the</span>
+              <span class="store-btn-name">App Store</span>
+            </span>
+          </a>
+          <span class="coming-soon-badge">Coming soon</span>
+          <a href="#download" class="store-btn store-btn-gplay" aria-label="Get TerraScribe on Google Play">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76a2 2 0 0 1-.97-1.74V1.98A2 2 0 0 1 3.18.24l12.26 11.76L3.18 23.76zm2.96-1.42 9.1-4.37-2.17-2.08-6.93 6.45zM17.3 14.5 6.14 20.6l6.93-6.46L17.3 14.5zm0-5 -4.23-1.64L6.14 1.4 17.3 7.5a2 2 0 0 1 0 2zm-11.16-7.1 2.17-2.07 9.1 4.37-7.27.42-3.99-2.72z"/></svg>
+            <span class="store-btn-inner">
+              <span class="store-btn-pre">Get it on</span>
+              <span class="store-btn-name">Google Play</span>
+            </span>
+          </a>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-white-outline">Get in touch</a>
+        </div>
+      </div>
+
+      <p class="hero-note">
+        <span>Free during beta</span>
+        <span aria-hidden="true">·</span>
+        <span>No account needed</span>
+        <span aria-hidden="true">·</span>
+        <span>Works fully offline</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#F8FAF6"/>
+    </svg>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════════════════
+     TRUST BAR
+════════════════════════════════════════════════════════ -->
+<div class="trust-bar" aria-label="Key features">
+  <div class="container">
+    <ul class="trust-items" role="list">
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+        Beekeeping &amp; farming in one app
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        Free beta — Android now, iOS soon
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Export to CSV &amp; PDF instantly
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 19a10.94 10.94 0 0 1-1.72-1.45M10.71 5.05A16 16 0 0 1 22.56 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 0 6.95-6.95"/><path d="M12 20a8 8 0 0 0 8-8"/><circle cx="12" cy="12" r="2"/></svg>
+        100% offline — no Wi-Fi needed
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Log a record in under 15 seconds
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════════════════ -->
+<section class="section" id="how-it-works" aria-labelledby="how-hd">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">How it works</p>
+      <h2 class="heading" id="how-hd">Three taps. Your record is saved.</h2>
+      <p>No typing. No menus. No paperwork. Just speak what you did, confirm, and it's logged.</p>
+    </div>
+
+    <ol class="steps-grid stagger" role="list" aria-label="Steps to log a record">
+      <li class="step-card">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3>Tap the microphone</h3>
+        <p>One big button, always on screen. Works one-handed, even mid-inspection with gloves on.</p>
+      </li>
+      <li class="step-card">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3>Speak what you did</h3>
+        <p>Say what you did — 'Hive 3, oxalic acid, 2ml' — and TerraScribe fills in the details automatically.</p>
+      </li>
+      <li class="step-card">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3>Confirm and save</h3>
+        <p>Review, correct anything if needed, and tap Save. Your record is permanently logged.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURES
+════════════════════════════════════════════════════════ -->
+<section class="section features-section" id="features" aria-labelledby="feat-hd">
+  <div class="container">
+    <div class="section-hd fade-up">
+      <p class="section-eyebrow">Features</p>
+      <h2 class="heading" id="feat-hd">Everything your farm records need</h2>
+      <p>Built for the field. Works where there's no signal. Keeps records that pass inspection.</p>
+    </div>
+
+    <div class="features-grid stagger">
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </div>
+        <h3>Voice logging</h3>
+        <p>Say what happened, skip the typing. TerraScribe understands treatments, quantities, dates and units — no commands to memorise.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 19a10.94 10.94 0 0 1-1.72-1.45M10.71 5.05A16 16 0 0 1 22.56 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 0 6.95-6.95"/></svg>
+        </div>
+        <h3>Always offline</h3>
+        <p>No signal? No problem. All your data lives on your phone. Works in the most remote fields and apiaries.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Hive &amp; field tracking</h3>
+        <p>Track hive health, queen status, varroa treatments, crop cycles and field events — all in one place.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <h3>Log treatments &amp; harvests</h3>
+        <p>Record every treatment, dose, harvest weight and cost. Your full history, always at your fingertips.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>Export reports instantly</h3>
+        <p>Generate clean CSV or PDF reports for any date range. Share by email, WhatsApp, or print — straight from the app.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <h3>Tasks &amp; reminders</h3>
+        <p>Create follow-up tasks by voice. Get push notifications when they're due — no internet needed.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     WHO IT'S FOR
+════════════════════════════════════════════════════════ -->
+<section class="section profiles-section" id="who" aria-labelledby="who-hd">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">Who it's for</p>
+      <h2 class="heading" id="who-hd">Built for every type of field operator</h2>
+    </div>
+
+    <div class="profiles-grid stagger">
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🐝</span>
+        <h3>Beekeepers</h3>
+        <p class="profile-role">Apiaries &amp; hive management</p>
+        <p>Track every hive inspection, treatment, queen status and colony health. Export your full history whenever you need it.</p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🌾</span>
+        <h3>Crop farmers</h3>
+        <p class="profile-role">Plots, orchards &amp; market gardens</p>
+        <p>Log pesticide applications, planting events and field observations. Your field diary, always in your pocket.</p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🐄</span>
+        <h3>Livestock farmers</h3>
+        <p class="profile-role">Cattle, sheep, pigs &amp; poultry</p>
+        <p>Record animal health events, vaccinations and feed costs. Complete traceability, zero paperwork.</p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🚜</span>
+        <h3>Equipment operators</h3>
+        <p class="profile-role">Machinery &amp; asset management</p>
+        <p>Log maintenance, service history and fuel costs per machine — without a single sheet of paper.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     EXPORT
+════════════════════════════════════════════════════════ -->
+<section class="section export-section" id="export" aria-labelledby="exp-hd">
+  <div class="compliance-glow-1" aria-hidden="true"></div>
+  <div class="compliance-glow-2" aria-hidden="true"></div>
+  <div class="container">
+    <div class="export-grid">
+
+      <div class="fade-up">
+        <p class="section-eyebrow section-eyebrow--light">Your data, your way</p>
+        <h2 class="heading" id="exp-hd">Export everything. Keep full control.</h2>
+        <p class="export-sub">
+          Every record you log in TerraScribe belongs to you — and you can take it anywhere.
+          Generate reports for any date range and export them instantly, without any internet connection.
+        </p>
+        <ul class="export-items">
+          <li><strong>PDF reports</strong> — clean, printable, ready to share</li>
+          <li><strong>CSV exports</strong> — open in Excel, Google Sheets, or any tool</li>
+          <li><strong>Hive inspection history</strong> — full timeline per hive</li>
+          <li><strong>Field &amp; treatment logs</strong> — every application recorded</li>
+          <li><strong>Treatment &amp; harvest summaries</strong> — by date range or unit</li>
+          <li><strong>Share instantly</strong> — email, WhatsApp, or print from the app</li>
+        </ul>
+      </div>
+
+      <div class="export-stats stagger">
+        <div class="estat">
+          <div class="estat-val">CSV</div>
+          <div class="estat-lbl">Open your data in any spreadsheet app — Excel, Sheets, Numbers</div>
+        </div>
+        <div class="estat">
+          <div class="estat-val">PDF</div>
+          <div class="estat-lbl">Clean, printable reports for every farm type — ready to share in seconds</div>
+        </div>
+        <div class="estat">
+          <div class="estat-val">100%</div>
+          <div class="estat-lbl">Offline — export any report without any internet connection</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     SCREENSHOTS
+════════════════════════════════════════════════════════ -->
+<section class="section screenshots-section" id="screenshots" aria-labelledby="ss-hd">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">App preview</p>
+      <h2 class="heading" id="ss-hd">Clean. Fast. Built for the field.</h2>
+      <p>Big buttons. High contrast. Everything one tap away — whether you're checking a hive or logging a spray.</p>
+    </div>
+  </div>
+
+  <div class="carousel-outer" role="region" aria-label="App screenshots carousel">
+    <div class="carousel" id="carousel">
+
+      <div class="c-item active" data-index="0">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="assets/images/screenshots/screen-1.png" alt="TerraScribe log screen"> -->
+            <div class="screen-ph" aria-label="Log screen">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Log Event</span>
+                <span class="ph-sub">Hive 3 · Apiary North</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">🐝</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+              </div>
+              <div class="screen-ph-btn">Save Record</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Log an Event</p>
+        <p class="c-desc">Select the hive or field, pick the event type, fill in the details. Done in seconds.</p>
+      </div>
+
+      <div class="c-item" data-index="1">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="assets/images/screenshots/screen-2.png" alt="TerraScribe hive timeline"> -->
+            <div class="screen-ph" aria-label="Hive timeline">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Hive 3 — History</span>
+                <span class="ph-sub">12 records · Last: 2 days ago</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">📋</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+              </div>
+              <div class="screen-ph-btn">View Full History</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Hive Timeline</p>
+        <p class="c-desc">Every inspection, treatment and harvest in one scrollable history per hive.</p>
+      </div>
+
+      <div class="c-item" data-index="2">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="assets/images/screenshots/screen-3.png" alt="TerraScribe field records"> -->
+            <div class="screen-ph" aria-label="Field records">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Field Records</span>
+                <span class="ph-sub">Plot A · Spring season</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">🌾</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#95D5B2"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+              </div>
+              <div class="screen-ph-btn">Add Treatment</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Field Records</p>
+        <p class="c-desc">Track sprays, plantings and observations per plot. A clean record every season.</p>
+      </div>
+
+      <div class="c-item" data-index="3">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="assets/images/screenshots/screen-4.png" alt="TerraScribe export screen"> -->
+            <div class="screen-ph" aria-label="Export screen">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Export Report</span>
+                <span class="ph-sub">Jan – Jun 2025 · All hives</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">📊</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+              </div>
+              <div class="screen-ph-btn" style="background:#1B2832">Export PDF / CSV</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Export Reports</p>
+        <p class="c-desc">Generate a PDF or CSV for any date range. Share via email, WhatsApp or print.</p>
+      </div>
+
+      <div class="c-item" data-index="4">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="assets/images/screenshots/screen-5.png" alt="TerraScribe treatments log"> -->
+            <div class="screen-ph" aria-label="Treatments log">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Treatments</span>
+                <span class="ph-sub">All units · Last 30 days</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">💊</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line"></div></div>
+              </div>
+              <div class="screen-ph-btn">Log Treatment</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Treatment Log</p>
+        <p class="c-desc">Every product, dose and date recorded. Ready to review or share with your vet.</p>
+      </div>
+
+    </div><!-- end .carousel -->
+
+    <div class="carousel-controls">
+      <button class="c-btn c-btn-prev" id="carouselPrev" aria-label="Previous screenshot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="c-dots" role="tablist" aria-label="Screenshot indicators">
+        <button class="c-dot active" role="tab" aria-selected="true"  aria-label="Screenshot 1"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Screenshot 2"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Screenshot 3"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Screenshot 4"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Screenshot 5"></button>
+      </div>
+      <button class="c-btn c-btn-next" id="carouselNext" aria-label="Next screenshot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════════ -->
+<section class="section faq-section" id="faq" aria-labelledby="faq-hd">
+  <div class="container container--sm">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="heading" id="faq-hd">Common questions</h2>
+    </div>
+
+    <div class="faq-list fade-up" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Is TerraScribe free?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Yes, TerraScribe is completely free during the beta period. Download it, use every feature, export all your records — no cost, no subscription.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Does it work without internet?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Completely. All your data is stored on your device. Logging, reporting, reminders, and CSV/PDF exports all work with zero signal.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          How fast can I log a record?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Under 15 seconds. Tap the mic, say what you did, review and save. No typing required.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Can I export my records?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Yes. Generate a report for any date range and export it as a clean CSV or PDF. Share by email, WhatsApp, or print — directly from the app.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Is my data private?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Your data never leaves your device unless you explicitly export it. No account is required, there's no cloud sync, and nothing is sent to our servers.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What farms does TerraScribe support?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Beekeeping, crop and field farming, livestock, and machinery management — all in one app.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          When is iOS available?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          We're working on it! TerraScribe is currently available on Android. iOS is coming soon — contact us to be notified when it launches.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Do I need to create an account?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          No. Download and start logging immediately. No sign-up, no login.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     DOWNLOAD CTA
+════════════════════════════════════════════════════════ -->
+<section class="section download-section" id="download" aria-labelledby="dl-hd">
+  <div class="hero-noise" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="section-eyebrow" style="color:rgba(255,255,255,.65);">Get started today</p>
+    <h2 class="heading" id="dl-hd">Start logging for free — takes 2 minutes to set up</h2>
+    <p class="subheading mt-sm">Free during beta. No account. Works offline from the first tap.</p>
+
+    <div class="download-btns">
+      <!-- Replace href values with real store URLs -->
+      <a href="#download" class="store-btn store-btn-ios disabled-soon" aria-label="Download TerraScribe on the App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span class="store-btn-inner">
+          <span class="store-btn-pre">Download on the</span>
+          <span class="store-btn-name">App Store</span>
+        </span>
+      </a><span class="coming-soon-badge">Coming soon</span>
+      <a href="#download" class="store-btn store-btn-gplay" aria-label="Get TerraScribe on Google Play">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M3.18 23.76a2 2 0 0 1-.97-1.74V1.98A2 2 0 0 1 3.18.24l12.26 11.76L3.18 23.76zm2.96-1.42 9.1-4.37-2.17-2.08-6.93 6.45zM17.3 14.5 6.14 20.6l6.93-6.46L17.3 14.5zm0-5 -4.23-1.64L6.14 1.4 17.3 7.5a2 2 0 0 1 0 2zm-11.16-7.1 2.17-2.07 9.1 4.37-7.27.42-3.99-2.72z"/></svg>
+        <span class="store-btn-inner">
+          <span class="store-btn-pre">Get it on</span>
+          <span class="store-btn-name">Google Play</span>
+        </span>
+      </a>
+    </div>
+    <p class="download-note">Android 10+ now available · iOS coming soon</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════ -->
+<section class="section contact-section" id="contact" aria-labelledby="ct-hd">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="fade-up">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="heading" id="ct-hd">Get in touch</h2>
+        <p>Questions about TerraScribe? Interested in a pilot with your farm cooperative? We'd love to hear from you.</p>
+
+        <ul class="contact-meta" aria-label="Contact details">
+          <li class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <!-- Replace with real email -->
+            <a href="mailto:contact@terrascribe.app">contact@terrascribe.app</a>
+          </li>
+          <li class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            We respond within 24 hours
+          </li>
+          <li class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            We speak English &amp; Spanish
+          </li>
+        </ul>
+      </div>
+
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="contact-form-card">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1.5rem;">Send us a message</h3>
+          <!--
+            Replace YOUR_FORM_ID with a real Formspree endpoint:
+            1. Go to formspree.io → create free form
+            2. Replace action value below
+            For a mailto fallback: action="mailto:contact@terrascribe.app" enctype="text/plain"
+          -->
+          <form action="https://formspree.io/f/xkovawkv" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@farm.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">I am a…</label>
+              <select id="subject" name="subject">
+                <option value="">Select your farm type</option>
+                <option value="beekeeper">Beekeeper</option>
+                <option value="livestock">Livestock farmer</option>
+                <option value="crop">Crop / plot farmer</option>
+                <option value="equipment">Equipment operator</option>
+                <option value="cooperative">Farm cooperative / association</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your farm and what you're looking for…" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send message</button>
+            <p class="form-note">Your data is only used to respond to your enquiry.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="./" class="nav-logo" aria-label="TerraScribe home">
+          <img class="nav-logo-icon" src="assets/images/terrascribe-logo.png" alt="" width="44" height="44">
+          TerraScribe
+        </a>
+        <p>The free field logbook for farmers and beekeepers. Offline. Simple. Yours.</p>
+      </div>
+
+      <nav aria-label="Product links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#export">Export</a></li>
+          <li><a href="#who">Who it's for</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Support links">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- Replace with real URL when available -->
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="es/">Español</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TerraScribe</p>
+      <div class="footer-lang-sw" aria-label="Language switcher">
+        <a href="./" class="active" hreflang="en">English</a>
+        <a href="es/" hreflang="es">Español</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

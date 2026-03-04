@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── Primary SEO ── -->
+  <title>TerraScribe — App Gratuita de Cuaderno de Campo para Apicultores y Agricultores</title>
+  <meta name="description" content="TerraScribe es la app gratuita para apicultores y agricultores. Registra tratamientos, inspecciones y cosechas sin internet. Exporta a CSV y PDF desde el móvil.">
+  <meta name="keywords" content="cuaderno de campo digital, app apicultura, registros ganadería, cumplimiento CUE España, app agricultura offline, fitosanitarios, libro de campo voz">
+  <link rel="canonical" href="https://terrascribe.app/es/">
+
+  <!-- ── hreflang ── -->
+  <link rel="alternate" hreflang="es" href="https://terrascribe.app/es/">
+  <link rel="alternate" hreflang="en" href="https://terrascribe.app/">
+  <link rel="alternate" hreflang="x-default" href="https://terrascribe.app/">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://terrascribe.app/es/">
+  <meta property="og:title"       content="TerraScribe — App Gratuita de Cuaderno de Campo para Apicultores y Agricultores">
+  <meta property="og:description" content="TerraScribe es la app gratuita para apicultores y agricultores. Registra tratamientos, inspecciones y cosechas sin internet. Exporta a CSV y PDF desde el móvil.">
+  <meta property="og:image"       content="https://terrascribe.app/assets/images/og-image.png">
+  <meta property="og:locale"      content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="TerraScribe — App Gratuita de Cuaderno de Campo">
+  <meta name="twitter:description" content="TerraScribe es la app gratuita para apicultores y agricultores. Registra tratamientos, inspecciones y cosechas sin internet. Exporta a CSV y PDF desde el móvil.">
+  <meta name="twitter:image"       content="https://terrascribe.app/assets/images/og-image.png">
+
+  <!-- ── Theme ── -->
+  <meta name="theme-color" content="#2D6A4F">
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+  <!-- ── Stylesheet (one level up) ── -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- ── Google Analytics / Ads (mismo ID que versión EN) ──
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
+
+  <!-- ── Structured data: SoftwareApplication ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TerraScribe",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Gestión Agrícola",
+    "operatingSystem": "Android",
+    "description": "App gratuita para apicultores y agricultores. Registra tratamientos, inspecciones y cosechas sin internet. Exporta a CSV y PDF desde el móvil.",
+    "url": "https://terrascribe.app/es/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": { "@type": "Organization", "name": "TerraScribe" },
+    "inLanguage": ["es", "en"]
+  }
+  </script>
+
+  <!-- ── Structured data: FAQ ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Es gratis TerraScribe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, TerraScribe es completamente gratuita durante el periodo beta. Todas las funciones, todos los exportes — sin coste ni suscripción."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Funciona sin internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Completamente. Todos tus datos se guardan en tu móvil. El registro, los informes, los recordatorios y las exportaciones funcionan sin señal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo exportar mis registros?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Genera un informe CSV o PDF para cualquier periodo. Puedes abrirlo en Excel, Google Sheets, o compartirlo por correo y WhatsApp directamente desde la app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es compatible con el Cuaderno de Explotación Unificado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabajamos en ello. Actualmente puedes registrar y exportar en CSV y PDF todos los datos clave: tratamientos, fechas, parcelas, operador y producto. La exportación en el formato oficial del CUE llegará próximamente. Tus datos ya están bien estructurados para cuando esta función esté lista."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se envían mis datos a algún servidor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Tus datos no salen de tu dispositivo a menos que tú los exportes. Sin cuenta, sin nube, sin telemetría. Tú tienes el control total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Para qué tipos de explotación sirve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apicultura, agricultura y cultivos, ganadería y gestión de maquinaria — todo en una sola app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuándo llegará a iPhone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "¡Pronto! TerraScribe está disponible ahora en Android. La versión iOS está en camino — escríbenos para que te avisemos en cuanto esté lista."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVEGACIÓN
+════════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav" aria-label="Navegación principal">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="./" class="nav-logo" aria-label="TerraScribe inicio">
+        <img class="nav-logo-icon" src="../assets/images/terrascribe-logo.png" alt="" width="44" height="44">
+        TerraScribe
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#how-it-works">Cómo funciona</a></li>
+        <li><a href="#features">Funciones</a></li>
+        <li><a href="#compliance">Exportar</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-lang" aria-label="Selector de idioma">
+          <a href="../" hreflang="en">EN</a>
+          <a href="./" class="active" hreflang="es" aria-current="page">ES</a>
+        </div>
+        <a href="#download" class="btn btn-sun btn-sm nav-cta-desktop">Descargar App</a>
+      </div>
+
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil -->
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <a href="#how-it-works">Cómo funciona</a>
+  <a href="#features">Funciones</a>
+  <a href="#compliance">Exportar</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contacto</a>
+  <a href="#download" class="btn btn-sun mt-md">Descargar App</a>
+  <div class="drawer-lang">
+    <a href="../" hreflang="en">EN</a>
+    <a href="./" hreflang="es">ES</a>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<header class="hero" id="top">
+  <div class="hero-noise" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Disponible en Android · iOS muy pronto
+      </div>
+
+      <h1 class="display">
+        Tu cuaderno de campo.<br>
+        <em>Siempre contigo.</em>
+      </h1>
+
+      <p class="hero-sub">
+        TerraScribe es la app gratuita para agricultores y apicultores.
+        Registra revisiones, tratamientos y cosechas en segundos — y exporta
+        todo a CSV o PDF cuando lo necesites. Sin papeles. Sin internet.
+      </p>
+
+      <div class="hero-mic" aria-hidden="true">
+        <div class="hero-mic-inner">
+          <img src="../assets/images/terrascribe-mic.png" alt="" class="hero-mic-icon">
+          <div class="hero-mic-rings" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="hero-transcription" aria-live="polite" role="status">
+        <span class="hero-transcription-label">Escuchando...</span>
+        <div class="hero-transcription-line" id="heroTranscription" data-phrases='["Colmena 3, ácido oxálico, 2ml","Campo A, fertilizado, 2 de marzo","Revisión reina, colonia fuerte","Tratamiento varroa, tiras Apivar, 6 semanas"]'></div>
+      </div>
+
+      <div class="hero-actions">
+        <div class="hero-download-row">
+          <a href="#download" class="store-btn store-btn-ios disabled-soon" aria-label="Descargar TerraScribe en App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span class="store-btn-inner">
+              <span class="store-btn-pre">Disponible en</span>
+              <span class="store-btn-name">App Store</span>
+            </span>
+          </a>
+          <span class="coming-soon-badge">Próximamente</span>
+          <a href="#download" class="store-btn store-btn-gplay" aria-label="Descargar TerraScribe en Google Play">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76a2 2 0 0 1-.97-1.74V1.98A2 2 0 0 1 3.18.24l12.26 11.76L3.18 23.76zm2.96-1.42 9.1-4.37-2.17-2.08-6.93 6.45zM17.3 14.5 6.14 20.6l6.93-6.46L17.3 14.5zm0-5 -4.23-1.64L6.14 1.4 17.3 7.5a2 2 0 0 1 0 2zm-11.16-7.1 2.17-2.07 9.1 4.37-7.27.42-3.99-2.72z"/></svg>
+            <span class="store-btn-inner">
+              <span class="store-btn-pre">Consíguelo en</span>
+              <span class="store-btn-name">Google Play</span>
+            </span>
+          </a>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-white-outline">Contáctanos</a>
+        </div>
+      </div>
+
+      <p class="hero-note">
+        <span>Gratis en beta</span>
+        <span aria-hidden="true">·</span>
+        <span>Sin cuenta ni registro</span>
+        <span aria-hidden="true">·</span>
+        <span>Funciona sin internet</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#F8FAF6"/>
+    </svg>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════════════════
+     BARRA DE CONFIANZA
+════════════════════════════════════════════════════════ -->
+<div class="trust-bar" aria-label="Características clave">
+  <div class="container">
+    <ul class="trust-items" role="list">
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 19a10.94 10.94 0 0 1-1.72-1.45"/></svg>
+        Funciona sin internet
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Normativa española y UE
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Inglés y español
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        Sin cuenta ni registro
+      </li>
+      <li class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Menos de 15 segundos por registro
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     CÓMO FUNCIONA
+════════════════════════════════════════════════════════ -->
+<section class="section" id="how-it-works" aria-labelledby="how-hd">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">Cómo funciona</p>
+      <h2 class="heading" id="how-hd">Tres pasos. Menos de 15 segundos.</h2>
+      <p>Sin escribir. Sin menús. Sin papeleo. Solo di lo que has hecho, confírmalo y queda registrado.</p>
+    </div>
+
+    <ol class="steps-grid stagger" role="list" aria-label="Pasos para registrar un evento">
+      <li class="step-card">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3>Toca el micrófono</h3>
+        <p>Un botón grande, siempre visible. Funciona con una sola mano, incluso con guantes. Sin menús que navegar.</p>
+      </li>
+      <li class="step-card">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3>Di lo que has hecho</h3>
+        <p>"Colmena 3, tratada con ácido oxálico, 2ml." TerraScribe extrae automáticamente la unidad, el tipo de evento, la cantidad y la fecha.</p>
+      </li>
+      <li class="step-card">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3>Confirma y guarda</h3>
+        <p>Revisa el registro extraído en pantalla. Edita lo que necesite corrección. Toca Guardar. Registro completado.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FUNCIONES
+════════════════════════════════════════════════════════ -->
+<section class="section features-section" id="features" aria-labelledby="feat-hd">
+  <div class="container">
+    <div class="section-hd fade-up">
+      <p class="section-eyebrow">Funciones</p>
+      <h2 class="heading" id="feat-hd">Todo lo que necesitan tus registros de campo</h2>
+      <p>Diseñado para el campo. Funciona sin señal. Registros que superan cualquier inspección.</p>
+    </div>
+
+    <div class="features-grid stagger">
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </div>
+        <h3>Registro por voz</h3>
+        <p>Toca el micrófono y habla con naturalidad. TerraScribe reconoce tus unidades, tipos de evento, cantidades y fechas sin necesidad de comandos.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 19a10.94 10.94 0 0 1-1.72-1.45"/></svg>
+        </div>
+        <h3>Siempre sin conexión</h3>
+        <p>Todos los datos permanecen en tu dispositivo. Sin internet, sin nube, sin suscripción para las funciones básicas. Funciona en los campos más remotos.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Cumplimiento normativo</h3>
+        <p>Captura nombre del producto, cantidades, datos del operador, plazos de seguridad y campos opcionales para España/UE. Períodos de retención de 3 o 5 años incluidos.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <h3>Tareas y recordatorios</h3>
+        <p>Crea tareas de seguimiento por voz. Las notificaciones push se activan cuando vencen — sin necesidad de conexión a internet.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Exporta informes</h3>
+        <p>Genera informes de cumplimiento, resumen de costes, actividad mensual e historial de unidades. Exporta en CSV o PDF y comparte por correo, WhatsApp o imprime.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Dos idiomas</h3>
+        <p>Soporte completo en inglés y español, incluido el reconocimiento de voz. Toda la interfaz, las categorías y los informes están traducidos.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     PARA QUIÉN ES
+════════════════════════════════════════════════════════ -->
+<section class="section profiles-section" id="who" aria-labelledby="who-hd">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">Para quién es</p>
+      <h2 class="heading" id="who-hd">Diseñado para todo tipo de operador agrícola</h2>
+    </div>
+
+    <div class="profiles-grid stagger">
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🐝</span>
+        <h3>Apicultores</h3>
+        <p class="profile-role">Colmenas y gestión de apiarios</p>
+        <p>Controla inspecciones de colmenas, tratamientos de varroasis, estado de la reina y salud de colonias. Exporta registros de cumplimiento para inspecciones oficiales.</p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🐄</span>
+        <h3>Ganaderos</h3>
+        <p class="profile-role">Bovino, ovino, porcino y avícola</p>
+        <p>Registra eventos sanitarios, vacunaciones, pesos y costes de alimentación. Registros con trazabilidad completa para auditorías veterinarias.</p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🌾</span>
+        <h3>Agricultores</h3>
+        <p class="profile-role">Parcelas, huertos y fincas</p>
+        <p>Anota aplicaciones de fitosanitarios, plantaciones, observaciones y datos de parcela con referencias SIGPAC para el cumplimiento en España.</p>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-emoji" aria-hidden="true">🚜</span>
+        <h3>Operadores de maquinaria</h3>
+        <p class="profile-role">Maquinaria y activos agrícolas</p>
+        <p>Registra mantenimiento, historial de revisiones, costes de combustible y eventos operativos por máquina — sin cuaderno de papel.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     NORMATIVA
+════════════════════════════════════════════════════════ -->
+<section class="section compliance-section" id="compliance" aria-labelledby="comp-hd">
+  <div class="compliance-glow-1" aria-hidden="true"></div>
+  <div class="compliance-glow-2" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="compliance-grid">
+
+      <div class="fade-up">
+        <p class="section-eyebrow section-eyebrow--light">Para agricultores y apicultores españoles</p>
+        <h2 class="heading" id="comp-hd">Prepárate para la nueva normativa — sin papel, desde hoy</h2>
+        <p class="compliance-sub">
+          Los cambios que llegan en 2026 van a requerir que agricultores y apicultores lleven registros digitales
+          de sus explotaciones. TerraScribe ya recoge la mayoría de esos datos. Empieza ahora, sin coste,
+          y tendrás un historial completo cuando la normativa entre en vigor.
+        </p>
+
+        <ul class="compliance-items" aria-label="Funciones de cumplimiento normativo">
+          <li class="ci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Exportación a CSV y PDF</strong><span>Genera informes de cualquier periodo y compártelos por correo, WhatsApp o imprime directamente</span></div>
+          </li>
+          <li class="ci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Historial de colmenas e inspecciones</strong><span>Registro completo de cada colmena: tratamientos, estado de la reina, varroasis y cosechas</span></div>
+          </li>
+          <li class="ci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Tratamientos y fitosanitarios</strong><span>Anota producto, cantidad, fecha, operador y parcela — todos los datos clave guardados localmente</span></div>
+          </li>
+          <li class="ci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>Registros de parcela con referencia SIGPAC</strong><span>Vincula tus eventos a identificadores de parcela para tus propios registros</span></div>
+          </li>
+          <li class="ci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="color: var(--wheat)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div><strong>Compatibilidad con formatos oficiales — próximamente</strong><span>Trabajamos en la exportación compatible con el Cuaderno de Explotación Unificado y otros formatos de la administración</span></div>
+          </li>
+          <li class="ci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div><strong>100% sin conexión</strong><span>Todos tus registros y exportaciones funcionan sin internet, en el campo más remoto</span></div>
+          </li>
+        </ul>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px;">
+
+          <p style="color: var(--sun); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem;">
+            Normativa española 2026 — Lo que ya puedes hacer
+          </p>
+
+          <p style="color: rgba(255,255,255,0.92); font-size: 0.9375rem; line-height: 1.75; margin-bottom: 1rem;">
+            La nueva normativa española de registro de explotaciones agrícolas y apícolas que entra en vigor el próximo año
+            exigirá llevar un cuaderno de campo digital con datos que hoy ya puedes empezar a recoger con TerraScribe:
+            tratamientos, productos, fechas, dosis, parcelas y estado de las colmenas.
+          </p>
+
+          <p style="color: rgba(255,255,255,0.72); font-size: 0.9rem; line-height: 1.75; margin-bottom: 1rem;">
+            En esta primera versión puedes exportar toda esa información en <strong style="color:#fff;">CSV y PDF</strong> —
+            formatos que cualquier asesor agrícola o veterinario puede abrir y revisar. Lo que estamos construyendo
+            ahora es la exportación directamente en los formatos oficiales exigidos, para que no tengas que hacer
+            ningún paso extra.
+          </p>
+
+          <p style="color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1rem; margin: 0;">
+            Somos honestos: TerraScribe está en fase beta y todavía no cubre el 100% de los requisitos formales de la
+            nueva normativa. Si usas la app ahora, nos ayudas a entender exactamente qué necesitan los agricultores
+            y apicultores españoles — y construimos eso juntos. Los datos que registres hoy no se perderán.
+          </p>
+
+        </div>
+
+        <div class="compliance-tags" style="margin-top: 1.5rem;" aria-label="Estado de funcionalidades">
+          <span class="ctag">CSV · PDF — Disponible ahora</span>
+          <span class="ctag">Sin papel desde el primer día</span>
+          <span class="ctag">Formatos oficiales — En desarrollo</span>
+          <span class="ctag">Beta abierta — Tu feedback importa</span>
+        </div>
+      </div>
+
+      <div class="compliance-stats stagger" aria-label="Estadísticas de cumplimiento">
+        <div class="cstat">
+          <div class="cstat-val">CSV + PDF</div>
+          <div class="cstat-lbl">Exporta tus registros en el formato que prefieras — sin internet</div>
+        </div>
+        <div class="cstat-row">
+          <div class="cstat">
+            <div class="cstat-val">🐝</div>
+            <div class="cstat-lbl">Apicultores — historial completo de colmenas y tratamientos</div>
+          </div>
+          <div class="cstat">
+            <div class="cstat-val">🌾</div>
+            <div class="cstat-lbl">Agricultores — fitosanitarios, parcelas y cosechas registradas</div>
+          </div>
+        </div>
+        <div class="cstat">
+          <div class="cstat-val">Pronto</div>
+          <div class="cstat-lbl">Exportación compatible con formatos oficiales de la administración española — en desarrollo activo</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     CAPTURAS DE PANTALLA
+════════════════════════════════════════════════════════ -->
+<section class="section screenshots-section" id="screenshots" aria-labelledby="ss-hd">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">Vista previa</p>
+      <h2 class="heading" id="ss-hd">Limpio. Rápido. Pensado para el campo.</h2>
+      <p>Botones grandes. Alto contraste. Todo a un toque — ya sea revisando una colmena o registrando un tratamiento.</p>
+    </div>
+  </div>
+
+  <div class="carousel-outer" role="region" aria-label="Carrusel de capturas de pantalla">
+    <div class="carousel" id="carousel">
+
+      <div class="c-item active" data-index="0">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="../assets/images/screenshots/screen-1.png" alt="Pantalla de registro TerraScribe"> -->
+            <div class="screen-ph" aria-label="Pantalla de registro">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Registrar evento</span>
+                <span class="ph-sub">Colmena 3 · Apiario Norte</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">🐝</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+              </div>
+              <div class="screen-ph-btn">Guardar registro</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Registrar evento</p>
+        <p class="c-desc">Selecciona la colmena o parcela, elige el tipo de evento y completa los datos. Listo en segundos.</p>
+      </div>
+
+      <div class="c-item" data-index="1">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="../assets/images/screenshots/screen-2.png" alt="Historial de colmena TerraScribe"> -->
+            <div class="screen-ph" aria-label="Historial de colmena">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Colmena 3 — Historial</span>
+                <span class="ph-sub">12 registros · Último: hace 2 días</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">📋</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+              </div>
+              <div class="screen-ph-btn">Ver historial completo</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Historial de colmena</p>
+        <p class="c-desc">Cada inspección, tratamiento y cosecha en un historial por colmena.</p>
+      </div>
+
+      <div class="c-item" data-index="2">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="../assets/images/screenshots/screen-3.png" alt="Registros de parcela TerraScribe"> -->
+            <div class="screen-ph" aria-label="Registros de parcela">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Registros de parcela</span>
+                <span class="ph-sub">Parcela A · Temporada primavera</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">🌾</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#95D5B2"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot"></div><div class="screen-ph-row-line"></div></div>
+              </div>
+              <div class="screen-ph-btn">Añadir tratamiento</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Registros de parcela</p>
+        <p class="c-desc">Aplicaciones, plantaciones y observaciones por parcela. Un registro limpio por temporada.</p>
+      </div>
+
+      <div class="c-item" data-index="3">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="../assets/images/screenshots/screen-4.png" alt="Pantalla de exportación TerraScribe"> -->
+            <div class="screen-ph" aria-label="Pantalla de exportación">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Exportar informe</span>
+                <span class="ph-sub">Ene – Jun 2025 · Todas las colmenas</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">📊</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line short"></div></div>
+              </div>
+              <div class="screen-ph-btn" style="background:#1B2832">Exportar PDF / CSV</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Exportar informes</p>
+        <p class="c-desc">Genera un PDF o CSV para cualquier período. Comparte por correo, WhatsApp o imprime.</p>
+      </div>
+
+      <div class="c-item" data-index="4">
+        <div class="phone">
+          <div class="phone-inner">
+            <!-- Replace with: <img src="../assets/images/screenshots/screen-5.png" alt="Registro de tratamientos TerraScribe"> -->
+            <div class="screen-ph" aria-label="Registro de tratamientos">
+              <div class="screen-ph-bar"><span>9:41</span><span>●●●</span></div>
+              <div class="screen-ph-header">
+                <span class="ph-title">Tratamientos</span>
+                <span class="ph-sub">Todas las unidades · Últimos 30 días</span>
+              </div>
+              <div class="screen-ph-icon"><span class="ph-emoji">💊</span></div>
+              <div class="screen-ph-rows">
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:#52B788"></div><div class="screen-ph-row-line short"></div></div>
+                <div class="screen-ph-row"><div class="screen-ph-row-dot" style="background:var(--sun)"></div><div class="screen-ph-row-line"></div></div>
+              </div>
+              <div class="screen-ph-btn">Registrar tratamiento</div>
+            </div>
+          </div>
+        </div>
+        <p class="c-label">Registro de tratamientos</p>
+        <p class="c-desc">Cada producto, dosis y fecha registrados. Listos para revisar o compartir con tu veterinario.</p>
+      </div>
+
+    </div>
+
+    <div class="carousel-controls">
+      <button class="c-btn c-btn-prev" id="carouselPrev" aria-label="Captura anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="c-dots" role="tablist" aria-label="Indicadores de captura">
+        <button class="c-dot active" role="tab" aria-selected="true"  aria-label="Captura 1"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Captura 2"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Captura 3"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Captura 4"></button>
+        <button class="c-dot"        role="tab" aria-selected="false" aria-label="Captura 5"></button>
+      </div>
+      <button class="c-btn c-btn-next" id="carouselNext" aria-label="Siguiente captura">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════════ -->
+<section class="section faq-section" id="faq" aria-labelledby="faq-hd">
+  <div class="container container--sm">
+    <div class="section-hd center fade-up">
+      <p class="section-eyebrow">Preguntas frecuentes</p>
+      <h2 class="heading" id="faq-hd">Dudas habituales</h2>
+    </div>
+
+    <div class="faq-list fade-up" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          ¿Es gratis TerraScribe?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Sí, TerraScribe es completamente gratuita durante el periodo beta. Todas las funciones, todos los exportes — sin coste ni suscripción.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          ¿Funciona sin internet?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Completamente. Todos tus datos se guardan en tu móvil. El registro, los informes, los recordatorios y las exportaciones funcionan sin señal.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          ¿Puedo exportar mis registros?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Sí. Genera un informe CSV o PDF para cualquier periodo. Puedes abrirlo en Excel, Google Sheets, o compartirlo por correo y WhatsApp directamente desde la app.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          ¿Es compatible con el Cuaderno de Explotación Unificado?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Trabajamos en ello. Actualmente puedes registrar y exportar en CSV y PDF todos los datos clave: tratamientos, fechas, parcelas, operador y producto. La exportación en el formato oficial del CUE llegará próximamente. Tus datos ya están bien estructurados para cuando esta función esté lista.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          ¿Se envían mis datos a algún servidor?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          No. Tus datos no salen de tu dispositivo a menos que tú los exportes. Sin cuenta, sin nube, sin telemetría. Tú tienes el control total.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          ¿Para qué tipos de explotación sirve?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          Apicultura, agricultura y cultivos, ganadería y gestión de maquinaria — todo en una sola app.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          ¿Cuándo llegará a iPhone?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          ¡Pronto! TerraScribe está disponible ahora en Android. La versión iOS está en camino — escríbenos para que te avisemos en cuanto esté lista.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     DESCARGA
+════════════════════════════════════════════════════════ -->
+<section class="section download-section" id="download" aria-labelledby="dl-hd">
+  <div class="hero-noise" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="section-eyebrow" style="color:rgba(255,255,255,.65);">Empieza hoy</p>
+    <h2 class="heading" id="dl-hd">Empieza gratis — listo en 2 minutos</h2>
+    <p class="subheading mt-sm">Gratis en beta. Sin cuenta. Funciona sin internet desde el primer día.</p>
+
+    <div class="download-btns">
+      <a href="#download" class="store-btn store-btn-ios disabled-soon" aria-label="Descargar TerraScribe en App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span class="store-btn-inner">
+          <span class="store-btn-pre">Disponible en</span>
+          <span class="store-btn-name">App Store</span>
+        </span>
+      </a><span class="coming-soon-badge">Próximamente</span>
+      <a href="#download" class="store-btn store-btn-gplay" aria-label="Descargar TerraScribe en Google Play">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true"><path d="M3.18 23.76a2 2 0 0 1-.97-1.74V1.98A2 2 0 0 1 3.18.24l12.26 11.76L3.18 23.76zm2.96-1.42 9.1-4.37-2.17-2.08-6.93 6.45zM17.3 14.5 6.14 20.6l6.93-6.46L17.3 14.5zm0-5 -4.23-1.64L6.14 1.4 17.3 7.5a2 2 0 0 1 0 2zm-11.16-7.1 2.17-2.07 9.1 4.37-7.27.42-3.99-2.72z"/></svg>
+        <span class="store-btn-inner">
+          <span class="store-btn-pre">Consíguelo en</span>
+          <span class="store-btn-name">Google Play</span>
+        </span>
+      </a>
+    </div>
+    <p class="download-note">Android 10+ disponible ahora · iOS muy pronto</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     CONTACTO
+════════════════════════════════════════════════════════ -->
+<section class="section contact-section" id="contact" aria-labelledby="ct-hd">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="fade-up">
+        <p class="section-eyebrow">Contacto</p>
+        <h2 class="heading" id="ct-hd">Escríbenos</h2>
+        <p>¿Preguntas sobre TerraScribe? ¿Interesado en un piloto con tu cooperativa o asociación agrícola? Nos encantará saber de ti.</p>
+
+        <ul class="contact-meta" aria-label="Datos de contacto">
+          <li class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contact@terrascribe.app">contact@terrascribe.app</a>
+          </li>
+          <li class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Respondemos en menos de 24 horas
+          </li>
+          <li class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Hablamos español e inglés
+          </li>
+        </ul>
+      </div>
+
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="contact-form-card">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1.5rem;">Envíanos un mensaje</h3>
+          <form action="https://formspree.io/f/xkovawkv" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@explotacion.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Soy…</label>
+              <select id="subject" name="subject">
+                <option value="">Selecciona tu tipo de explotación</option>
+                <option value="apicultor">Apicultor/a</option>
+                <option value="ganadero">Ganadero/a</option>
+                <option value="agricultor">Agricultor/a</option>
+                <option value="maquinaria">Operador de maquinaria</option>
+                <option value="cooperativa">Cooperativa / asociación</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" placeholder="Cuéntanos sobre tu explotación y lo que buscas…" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar mensaje</button>
+            <p class="form-note">Tus datos solo se utilizan para responder a tu consulta.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     PIE DE PÁGINA
+════════════════════════════════════════════════════════ -->
+<footer class="footer" aria-label="Pie de página">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="./" class="nav-logo" aria-label="TerraScribe inicio">
+          <img class="nav-logo-icon" src="../assets/images/terrascribe-logo.png" alt="" width="44" height="44">
+          TerraScribe
+        </a>
+        <p>Cuaderno de campo por voz para agricultores y apicultores. Sin internet siempre. Normativa incluida.</p>
+      </div>
+
+      <nav aria-label="Producto">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#how-it-works">Cómo funciona</a></li>
+          <li><a href="#features">Funciones</a></li>
+          <li><a href="#compliance">Exportar</a></li>
+          <li><a href="#who">Para quién es</a></li>
+          <li><a href="#download">Descarga</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Soporte">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li><a href="../privacy-policy.html">Política de privacidad</a></li>
+          <li><a href="../">English</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> TerraScribe</p>
+      <div class="footer-lang-sw" aria-label="Selector de idioma">
+        <a href="../" hreflang="en">English</a>
+        <a href="./" class="active" hreflang="es">Español</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
